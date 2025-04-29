@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.9)  29 APR 2025 09:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.9)  29 APR 2025 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -415,66 +415,53 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 61.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 76.
+Package scrextend Info: File `scrsize12pt.clo' used to setup font sizes on input line 71.
+(/usr/share/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2024/10/24 v3.43 KOMA-Script font size class option (12pt)
+)
 LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[]|\TU/TimesNewRoman(0)/m/n/14 Алгоритм Бойера-
- []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[]|\TU/TimesNewRoman(0)/m/n/14 Алгоритм Кнутта-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (1.29199pt too wide) in paragraph at lines 80--80
-[]|\TU/TimesNewRoman(0)/m/n/14 Сравнения| 
- []
-
-
-Overfull \hbox (1.29199pt too wide) in paragraph at lines 80--80
-[]|\TU/TimesNewRoman(0)/m/n/14 Сравнения| 
- []
-
-
-Overfull \hbox (1.29199pt too wide) in paragraph at lines 80--81
-[]|\TU/TimesNewRoman(0)/m/n/14 Сравнения| 
- []
-
-
-Underfull \hbox (badness 5726) in paragraph at lines 103--106
+Underfull \hbox (badness 5726) in paragraph at lines 204--206
 []\TU/TimesNewRoman(0)/m/n/14 В таблице 1 приведены результаты бенчмарков каждого алгоритма. Данные
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-[]\TU/TimesNewRoman(0)/m/n/14 В заключение можно сказать, что алгоритм БМХ является лучшим среди
  []
 
 
 
 [1
 
-] (.aux/main.aux)
+]
+Underfull \hbox (badness 1137) in paragraph at lines 207--210
+\TU/TimesNewRoman(0)/m/n/14 расположены в том порядке, в каком они были представлены в файлах бенчмарков.
+ []
+
+
+
+[2] (.aux/main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8843 strings out of 475848
- 194988 string characters out of 5776014
- 659021 words of memory out of 5000000
- 31670 multiletter control sequences out of 15000+600000
- 561788 words of font info for 64 fonts, out of 8000000 for 9000
+ 8860 strings out of 475848
+ 195305 string characters out of 5776014
+ 681021 words of memory out of 5000000
+ 31676 multiletter control sequences out of 15000+600000
+ 563618 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,10n,107p,330b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,10n,107p,327b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on .aux/main.xdv (1 page, 18848 bytes).
+Output written on .aux/main.xdv (2 pages, 25616 bytes).

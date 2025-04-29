@@ -9,7 +9,7 @@ from utils import measure_algorithm, print_results
 
 
 BENCHMARKS_PATH = Path().resolve() / "benchmarks"
-N = 100
+N = 1000
 
 
 def main():
