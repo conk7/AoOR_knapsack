@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.9)  29 APR 2025 10:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.9)  30 APR 2025 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -427,8 +427,27 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (1.28906pt too wide) in paragraph at lines 105--105
+[]|\TU/TimesNewRoman(0)/m/n/12 Стоимость| 
+ []
+
+
+Overfull \hbox (1.28906pt too wide) in paragraph at lines 130--130
+[]|\TU/TimesNewRoman(0)/m/n/12 Стоимость| 
+ []
+
+
+Overfull \hbox (1.28906pt too wide) in paragraph at lines 155--155
+[]|\TU/TimesNewRoman(0)/m/n/12 Стоимость| 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (1.28906pt too wide) in paragraph at lines 181--181
+[]|\TU/TimesNewRoman(0)/m/n/12 Стоимость| 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -462,6 +481,6 @@ Here is how much of TeX's memory you used:
  31676 multiletter control sequences out of 15000+600000
  563618 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,10n,107p,327b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,10n,107p,331b,382s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on .aux/main.xdv (2 pages, 25616 bytes).
+Output written on .aux/main.xdv (2 pages, 25976 bytes).

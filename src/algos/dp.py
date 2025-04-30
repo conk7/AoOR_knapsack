@@ -17,12 +17,8 @@ def dp_solution(w: List[int], c: List[int], W: int):
                 dp[i][weight] = dp[i - 1][weight]
             intermediate_steps += 1
 
-    i = W
-    while dp[n][i - 1] == dp[n][i]:
-        i -= 1
-
-    best_weight = i
-    best_value = dp[n][i]
+    best_weight = max(range(W + 1), key=lambda x: dp[n][x])
+    best_value = dp[n][best_weight]
 
     result_items = [0] * n
     i, current_weight = n, best_weight

@@ -3,9 +3,9 @@ from typing import List
 
 
 class Node:
-    def __init__(self, level: int, value: int, weight: int, taken: List[int]):
+    def __init__(self, level: int, cost: int, weight: int, taken: List[int]):
         self.level = level
-        self.value = value
+        self.cost = cost
         self.weight = weight
         self.bound = 0
         self.taken = taken[:]
@@ -21,7 +21,7 @@ def bnb_solution(w: List[int], c: List[int], W: int):
     def compute_upper_bound(node: Node):
         if node.weight >= W:
             return 0
-        val_bound = node.value
+        val_bound = node.cost
         total_weight = node.weight
         j = node.level
         while j < n and total_weight + w[j] <= W:
@@ -43,27 +43,27 @@ def bnb_solution(w: List[int], c: List[int], W: int):
     heapq.heappush(queue, u)
     intermediate_steps += 1
 
-    max_value = 0
+    max_cost = 0
     best_taken = []
 
     while queue:
         u: Node = heapq.heappop(queue)
-        if not (u.bound > max_value and u.level < n):
+        if not (u.bound > max_cost and u.level < n):
             continue
 
         taken_with = u.taken + [1]
-        v = Node(u.level + 1, u.value + c[u.level], u.weight + w[u.level], taken_with)
-        if v.weight <= W and v.value > max_value:
-            max_value = v.value
+        v = Node(u.level + 1, u.cost + c[u.level], u.weight + w[u.level], taken_with)
+        if v.weight <= W and v.cost > max_cost:
+            max_cost = v.cost
             best_taken = v.taken
         v.bound = compute_upper_bound(v)
-        if v.bound > max_value:
+        if v.bound > max_cost:
             heapq.heappush(queue, v)
 
         taken_without = u.taken + [0]
-        v = Node(u.level + 1, u.value, u.weight, taken_without)
+        v = Node(u.level + 1, u.cost, u.weight, taken_without)
         v.bound = compute_upper_bound(v)
-        if v.bound > max_value:
+        if v.bound > max_cost:
             heapq.heappush(queue, v)
 
         intermediate_steps += 2
@@ -74,7 +74,7 @@ def bnb_solution(w: List[int], c: List[int], W: int):
             result_items[indices[idx]] = 1
 
     total_weight = sum(w[i] for i in range(n) if result_items[indices[i]])
-    return result_items, max_value, total_weight, intermediate_steps
+    return result_items, max_cost, total_weight, intermediate_steps
 
 
 __all__ = ["bnb_solution"]
