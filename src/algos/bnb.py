@@ -19,8 +19,9 @@ def bnb_solution(w: List[int], c: List[int], W: int):
     intermediate_steps = 0
 
     def compute_upper_bound(node: Node):
+        intermediate_steps = 0
         if node.weight >= W:
-            return 0
+            return 0, 0
         val_bound = node.cost
         total_weight = node.weight
         j = node.level
@@ -28,9 +29,11 @@ def bnb_solution(w: List[int], c: List[int], W: int):
             total_weight += w[j]
             val_bound += c[j]
             j += 1
+            intermediate_steps += 1
         if j < n:
             val_bound += (W - total_weight) * (c[j] / w[j])
-        return val_bound
+        intermediate_steps += 1
+        return val_bound, intermediate_steps
 
     items = sorted(
         [(w[i], c[i], i) for i in range(n)], key=lambda x: x[1] / x[0], reverse=True
@@ -39,7 +42,8 @@ def bnb_solution(w: List[int], c: List[int], W: int):
 
     queue = []
     u = Node(0, 0, 0, [])
-    u.bound = compute_upper_bound(u)
+    u.bound, tmp_intermediate_steps = compute_upper_bound(u)
+    intermediate_steps += tmp_intermediate_steps
     heapq.heappush(queue, u)
     intermediate_steps += 1
 
@@ -56,13 +60,15 @@ def bnb_solution(w: List[int], c: List[int], W: int):
         if v.weight <= W and v.cost > max_cost:
             max_cost = v.cost
             best_taken = v.taken
-        v.bound = compute_upper_bound(v)
+        v.bound, tmp_intermediate_steps = compute_upper_bound(v)
+        intermediate_steps += tmp_intermediate_steps
         if v.bound > max_cost:
             heapq.heappush(queue, v)
 
         taken_without = u.taken + [0]
         v = Node(u.level + 1, u.cost, u.weight, taken_without)
-        v.bound = compute_upper_bound(v)
+        v.bound, tmp_intermediate_steps = compute_upper_bound(v)
+        intermediate_steps += tmp_intermediate_steps
         if v.bound > max_cost:
             heapq.heappush(queue, v)
 
